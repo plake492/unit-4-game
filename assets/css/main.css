@@ -1,0 +1,29 @@
+body {
+    background-image: url("../images/bg5.jpg");
+    background-repeat: no-repeat;
+    background-size: inherit;
+    color: white;
+}
+    
+img {
+    width: 200px;
+    height: auto;
+    padding: 10px 0 10px 0;
+}
+
+button { 
+    margin: 0 20px 0 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.character-img {
+    display: flex;
+    flex-flow: row;
+    padding: 10px;
+    
+}
+
+#aHealth,#sHealth   ,#wHealth,#gHealth {
+    color: white;
+}
