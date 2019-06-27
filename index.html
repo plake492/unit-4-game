@@ -15,28 +15,28 @@
     <div class="character-img">
         <!-- ARAGORN -->
         <div id="aragorn">
-            <button onclick="moveButton(this)" type="button">
+            <button onclick="moveButtonC(this)" onclick="moveButtonO(this)" type="button">
                 <img src="assets/images/aragorn.jpeg" alt="">
                 <p id="aHealth"></p>
             </button>
         </div>
         <!-- SOURON -->
-        <div>
-            <button>
+        <div id="souron">
+            <button  onclick="moveButtonC(this)" onclick="moveButtonO(this)" type="button">
                 <img src="assets/images/Sauron.jpeg" alt="">
                 <p id="sHealth"></p>
             </button>
         </div>
         <!-- WHITCH KING -->
-        <div>
-            <button>
+        <div id="witchKing">
+            <button onclick="moveButtonC(this)" onclick="moveButtonO(this)" type="button">
                 <img src="assets/images/WitchKing.jpeg" alt="">
                 <p id="wHealth"></p>
             </button>
         </div>
         <!-- GANDALF -->
-        <div>
-            <button>
+        <div id="gandalf">
+            <button onclick="moveButtonC(this)" onclick="moveButtonO(this)" type="button">
                 <img src="assets/images/gandalf.jpeg" alt="">
                 <p id="gHealth"></p>
             </button>
@@ -50,11 +50,21 @@
                 
             </div>
     </div>
+    <div>
+        <button onclick="playTemp.att()" class="attack-button">Attack</button>
+            <p id="attack"></p>
+    </div>
+    <div>
+        <p>Your Opponent</p>
+            <div id="opponent">
+
+                
+            </div>
+    </div>
 
 
-    <script src="scripts/main.js"></script>
+    <script src="assets/scripts/main.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
-
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

@@ -15,6 +15,7 @@ button {
     margin: 0 20px 0 20px;
     background-color: rgba(0, 0, 0, 0.5);
     border-color: rgba(0, 0, 0, 0.5);
+    color: white
 }
 
 .character-img {
@@ -26,4 +27,8 @@ button {
 
 #aHealth,#sHealth   ,#wHealth,#gHealth {
     color: white;
+}
+
+.attack-button {
+    margin: 10px 20px 10px 20px;
 }
