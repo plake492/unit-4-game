@@ -15,28 +15,28 @@
     <div class="character-img">
         <!-- ARAGORN -->
         <div id="aragorn">
-            <button onclick="moveButtonC(this)" onclick="moveButtonO(this)" type="button">
+            <button onclick="goThereA()" type="button">
                 <img src="assets/images/aragorn.jpeg" alt="">
                 <p id="aHealth"></p>
             </button>
         </div>
         <!-- SOURON -->
-        <div id="souron">
-            <button  onclick="moveButtonC(this)" onclick="moveButtonO(this)" type="button">
+        <div id="sauron">
+            <button onclick="goThereS()" type="button">
                 <img src="assets/images/Sauron.jpeg" alt="">
                 <p id="sHealth"></p>
             </button>
         </div>
         <!-- WHITCH KING -->
         <div id="witchKing">
-            <button onclick="moveButtonC(this)" onclick="moveButtonO(this)" type="button">
+            <button onclick="goThereW()" type="button">
                 <img src="assets/images/WitchKing.jpeg" alt="">
                 <p id="wHealth"></p>
             </button>
         </div>
         <!-- GANDALF -->
         <div id="gandalf">
-            <button onclick="moveButtonC(this)" onclick="moveButtonO(this)" type="button">
+            <button onclick="goThereG()" type="button">
                 <img src="assets/images/gandalf.jpeg" alt="">
                 <p id="gHealth"></p>
             </button>
@@ -51,11 +51,13 @@
             </div>
     </div>
     <div>
-        <button onclick="playTemp.att()" class="attack-button">Attack</button>
+        <button onclick="fight()" class="attack-button">Attack</button>
             <p id="attack"></p>
+
+        
     </div>
     <div>
-        <p>Your Opponent</p>
+        <p id="return">Your Opponent</p>
             <div id="opponent">
 
                 

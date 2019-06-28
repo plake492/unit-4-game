@@ -1,40 +1,122 @@
+//ATTACK CHARACTER & OPPONANT 
+let attackCharacter = []
+
+let opponentCharacter = []
+
 // CHARACTERS
-aragorn = {
-    health: 160,
-    attack: 25,
-    counterAttack: 30,
+let characters =[
+    aragorn = {
+        name: "Aragorn",
+        health: 160,
+        attack: 25,
+        counterAttack: 15,
 
-    increaseAttack()  {
-        this.attack = this.attack * 2;
-    }
-};
-let sauron = {
-    health: 200,
-    attack: 15,
-    counterAttack: 20,
+        // increaseAttack()  {
+        //     this.attack = this.attack * 2;
+        // }
+    },
+    sauron = {
+        name: "Sauron",
+        health: 200,
+        attack: 15,
+        counterAttack: 20,
 
-    increaseAttack()  {
-        this.attack = this.attack * 2;
-    }
-};
-let gandalf = {
-    health: 140,
-    attack: 20,
-    counterAttack: 40,
+        // increaseAttack()  {
+        //     this.attack = this.attack * 2;
+        // }
+    },
+    gandalf = {
+        name: "Gandalf",
+        health: 140,
+        attack: 20,
+        counterAttack: 40,
 
-    increaseAttack()  {
-        this.attack = this.attack * 2;
-    }
-};
-let witchKing = {
-    health: 180,
-    attack: 30,
-    counterAttack: 10,
+        // increaseAttack()  {
+        //     this.attack = this.attack * 2;
+        // }
+    },
+    witchKing = {
+        name:"Witch King",
+        health: 180,
+        attack: 30,
+        counterAttack: 10,
 
-    increaseAttack()  {
-        this.attack = this.attack * 2;
-    }
-};
+        // increaseAttack()  {
+        //     this.attack = this.attack * 2;
+        // }
+    },
+]
+    console.log(characters)
+
+        function goThereA() {
+            if (attackCharacter.length === 0 && opponentCharacter.length === 0) {
+                attackCharacter.push(aragorn)
+                $("#aragorn").appendTo("#playerCharacter");
+            } else if (attackCharacter.length === 1 && opponentCharacter.length === 0) { 
+                opponentCharacter.push(aragorn)
+                $("#aragorn").appendTo("#opponent");
+
+            } else {
+                return 
+            } 
+            console.log("push attacker: ")   
+            console.log(attackCharacter)
+            console.log("push opponent: ")
+            console.log(opponentCharacter)
+        }
+
+        function goThereS() {
+            if (attackCharacter.length === 0 && opponentCharacter.length === 0) {
+                attackCharacter.push(sauron)
+                $("#sauron").appendTo("#playerCharacter");
+            } else if (attackCharacter.length === 1 && opponentCharacter.length === 0) { 
+                opponentCharacter.push(sauron)
+                $("#sauron").appendTo("#opponent");
+            } else {
+                return 
+            } 
+            console.log("push attacker: ")    
+            console.log(attackCharacter)
+            console.log("push opponent: ")
+            console.log(opponentCharacter)
+        }
+
+        function goThereW() {
+            if (attackCharacter.length === 0 && opponentCharacter.length === 0) {
+                attackCharacter.push(witchKing)
+                $("#witchKing").appendTo("#playerCharacter");
+            } else if (attackCharacter.length === 1 && opponentCharacter.length === 0) { 
+                opponentCharacter.push(witchKing)
+                $("#witchKing").appendTo("#opponent");
+
+            } else {
+                
+                return 
+            } 
+            console.log("push attacker: ")    
+            console.log(attackCharacter)
+            console.log("push opponent: ")
+            console.log(opponentCharacter)
+        }
+
+        function goThereG() {
+            if (attackCharacter.length === 0 && opponentCharacter.length === 0) {
+                attackCharacter.push(gandalf)
+                $("#gandalf").appendTo("#playerCharacter");
+            } else if (attackCharacter.length === 1 && opponentCharacter.length === 0) { 
+                opponentCharacter.push(gandalf)
+                $("#gandalf").appendTo("#opponent");
+            } else {
+                return 
+            } 
+            console.log("push attacker: ")    
+            console.log(attackCharacter)
+            console.log("push opponent: ")
+            console.log(opponentCharacter)
+        }
+
+
+
 
 function reWriteStats() {
     // console.log(aragorn.attack)
@@ -59,48 +141,49 @@ sHealthDisplay.textContent = "Health: " + sauron.health + "  " + sauron.attack
 wHealthDisplay.textContent = "Health: " + witchKing.health + "  " + witchKing.attack
 gHealthDisplay.textContent = "Health: " + gandalf.health + "   " + gandalf.attack
 
-// MOVE CHARACTER TO PLAYER CHARACTER
-function moveButtonC(elem) {
-    $(elem).attr("id") == "aragorn"
-    $(elem).appendTo("#playerCharacter");
+// ATTACK
+function fight() {
+
+    opponentCharacter[0].health = opponentCharacter[0].health - attackCharacter[0].attack;
+    // document.getElementById("attack").innerHTML = "Health: " + opponentCharacter[0].health;
+    reWriteStats();
+        console.log(opponentCharacter[0].health)
+    attackCharacter[0].health = attackCharacter[0].health - opponentCharacter[0].counterAttack;
+    if (opponentCharacter[0].health <= 0) {
+        emptyOpponent()
+    }
 }
-function moveButtonC(elem) {
-    $(elem).attr("id") == "sauron"
-    $(elem).appendTo("#playerCharacter");
+
+// EMPTY OPPONANT
+function emptyOpponent () {
+    opponentCharacter = []
+    $("#opponent").remove();
+    $("#return").html('<div id="opponent"></div>')
+    increaseAttack()
+    reWriteStats()
+    return
 }
-function moveButtonC(elem) {
-    $(elem).attr("id") == "witchKing"
-    $(elem).appendTo("#playerCharacter");
-}
-function moveButtonC(elem) {
-    $(elem).attr("id") == "gandalf"
-    $(elem).appendTo("#playerCharacter");
+
+function increaseAttack() {
+    attackCharacter[0].attack = attackCharacter[0].attack * 2
 }
 
 
-// MOVE CHARACTER TO OPPONANT CHARACTER
-function moveButtonO(elem) {
-    $(elem).attr("id") == "aragorn"
-    $(elem).appendTo("#opponent");
-}
-function moveButtonO(elem) {
-    $(elem).attr("id") == "sauron"
-    $(elem).appendTo("#opponent");
-}
-function moveButtonO(elem) {
-    $(elem).attr("id") == "witchKing"
-    $(elem).appendTo("#opponent");
-}
-function moveButtonO(elem) {
-    $(elem).attr("id") == "gandalf"
-    $(elem).appendTo("#opponent");
-}
 
 
+
+
+
+
+
+
+
+
+// ================================================================================================
 // TESTING HOW TO EFFECT THE ATTACK VALUE
+
 document.onkeyup = function(event) {
     let keyPress = event.key 
-
 
     if (keyPress === 'a') {
        aragorn.increaseAttack()
@@ -110,38 +193,16 @@ document.onkeyup = function(event) {
         sauron.increaseAttack()
         reWriteStats()
      }
-     if (keyPress === 'w') {
+    if (keyPress === 'w') {
         witchKing.increaseAttack()
         reWriteStats()
      }
-     if (keyPress === 'g') {
+    if (keyPress === 'g') {
         gandalf.increaseAttack()
         reWriteStats()
      }
 
 }
-
-
-// TEST AREA
-let playTemp = {
-    attTemp: 40,      
-    healthTemp: 200,
-    newHealth: 200, //the new value goes here
-    
-    att:function() {
-        this.newHealth = this.newHealth- this.attTemp;
-        document.getElementById("attack").innerHTML = "Health: " + this.newHealth;
-        if (this.newHealth > 0 ) {
-            return 
-        } else {
-          alert("deafeated")
-        }
-    }
-};
-
-let newHealthText = document.getElementById("attack")
-newHealthText.textContent = "Health: " + playTemp.newHealth
-
 
 
 
