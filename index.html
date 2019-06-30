@@ -9,60 +9,81 @@
 
 </head>
 <body>
+
+        <div>
+                <p id="yourCharacterText"></p>
+                    <div id="playerCharacter">
+        
+                        
+                    </div>
+            </div>  
     <!-- <header> -->
-        <p>Choose Your character</p>
+        <p id="characterOrOpponent">Choose Your Character</p>
     </header>
-    <div class="character-img">
+    <div id="playerChoice" class="character-img">
         <!-- ARAGORN -->
         <div id="aragorn">
-            <button onclick="goThereA()" type="button">
+            <button onclick="goThereA()" type="button" id="ar">
+                <p>Aragorn</p>
                 <img src="assets/images/aragorn.jpeg" alt="">
                 <p id="aHealth"></p>
             </button>
         </div>
         <!-- SOURON -->
         <div id="sauron">
-            <button onclick="goThereS()" type="button">
+            <button onclick="goThereS()" type="button" id="sa">
+                <p>Sauron</p>
                 <img src="assets/images/Sauron.jpeg" alt="">
                 <p id="sHealth"></p>
             </button>
         </div>
+        <!-- GANDALF -->
+        <div id="gandalf">
+                <button onclick="goThereG()" type="button" id="ga"> 
+                    <p>Gandalf</p>
+                    <img src="assets/images/gandalf.jpeg" alt="">
+                    <p id="gHealth"></p>
+                </button>
+            </div>
         <!-- WHITCH KING -->
         <div id="witchKing">
-            <button onclick="goThereW()" type="button">
+            <button onclick="goThereW()" type="button" id="wk">
+                <p>Witch King</p>
                 <img src="assets/images/WitchKing.jpeg" alt="">
                 <p id="wHealth"></p>
             </button>
         </div>
-        <!-- GANDALF -->
-        <div id="gandalf">
-            <button onclick="goThereG()" type="button">
-                <img src="assets/images/gandalf.jpeg" alt="">
-                <p id="gHealth"></p>
-            </button>
-        </div>
+    
     </div>
+    <div id="holdHere">
 
-    <div>
-        <p>Your Character</p>
-            <div id="playerCharacter">
-
-                
-            </div>
     </div>
+    <!-- <img class ="gif" src="assets/images/aragorn.gif" alt="">
+    <img class ="gif" src="assets/images/sauron.gif" alt="">
+    <img class ="gif" src="assets/images/gandalf.gif" alt="">
+    <img class ="gif" src="assets/images/witchking.gif" alt=""> -->
+
+
+   
     <div>
         <button onclick="fight()" class="attack-button">Attack</button>
+        <p id="display-fight"></p>
+        <p id="display-counter"></p>
             <p id="attack"></p>
 
         
     </div>
-    <div>
-        <p id="return">Your Opponent</p>
+    <div id="reset-button">
+        <p id="opponentText"></p>
+        <p id="return"></p>
             <div id="opponent">
 
                 
             </div>
+
     </div>
+
+ 
 
 
     <script src="assets/scripts/main.js"></script>

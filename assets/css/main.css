@@ -1,34 +1,87 @@
+@font-face {
+    font-family: "lotr";
+    src: url("../fonts/hobbitonbrushhand-webfont.ttf") format('truetype');
+}
+@font-face {
+    font-family: "lotr1";
+    src: url("../fonts/Midjungards.ttf") format('truetype');
+}
+@font-face {
+    font-family: "lotr2";
+    src: url("../fonts/anicm___.ttf") format('truetype');
+
+}
+@font-face {
+    font-family: "lotr3";
+    src: url("../fonts/tngan.ttf") format('truetype');
+
+}
+
 body {
-    background-image: url("../images/bg5.jpg");
+    background-image: url("../images/bg2.jpg");
     background-repeat: no-repeat;
-    background-size: inherit;
+    background-size: initial;
     color: white;
+    font-size: 12px;
+    font-family: lotr2, Helvetica, sans-serif ;
+    
 }
     
 img {
-    width: 200px;
+    width: 150px;
     height: auto;
-    padding: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
+}
+.gif {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width:auto;
+    height: auto;
+
 }
 
 button { 
     margin: 0 20px 0 20px;
     background-color: rgba(0, 0, 0, 0.5);
     border-color: rgba(0, 0, 0, 0.5);
-    color: white
+    color: white;
+    font-size: 12px;
+    font-family: lotr2, Helvetica, sans-serif ;
+
 }
 
 .character-img {
     display: flex;
     flex-flow: row;
     padding: 10px;
+    font-size: 12px;
+    font-family: lotr2, Helvetica, sans-serif ;
+
     
 }
 
-#aHealth,#sHealth   ,#wHealth,#gHealth {
+#aHealth,#sHealth,#wHealth,#gHealth {
     color: white;
 }
 
-.attack-button {
-    margin: 10px 20px 10px 20px;
+.display-fight {
+    color: white
 }
+
+.attack-button {
+    margin: 5px 20px 5px 20px;
+    font-size: 12px;
+    font-family: lotr2, Helvetica, sans-serif ;
+    display: flex;
+}
+
+
+#attacker {
+    background-color: rgba(72, 122, 24, 0.486)
+}
+#defender {
+    background-color: rgba(255, 13, 13, 0.493)
+}
+
