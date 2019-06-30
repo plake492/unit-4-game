@@ -1,0 +1,14 @@
+there are two aspects of the game that I was unable to complete
+
+1. I was not able to get the reset button to properly restart the game. 
+    I waited untill the end to attempt to make a function that would reset the game and by
+    that point, there was too much to try to reset. I should have created a function that I could easily 
+    call back, but I would have had to develop the foundation upon that function instead of trying to 
+    add it later.
+
+2. I was unable to get the attack to increase by the characters attack value, instead, the vaule 
+    just doubles after every attack. If each players attack was the same, this would be simple to fix, 
+    I would sipmly add whatever number the attack value is after every attack. but since each character 
+    has a different attack value, it was more complex. 
+
+    
